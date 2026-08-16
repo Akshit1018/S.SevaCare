@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-sans: "Figtree", "Segoe UI", system-ui, sans-serif;
+
+  --color-bg: #f4efe6;
+  --color-bg-warm: #ebe4d8;
+  --color-surface: #fffcf7;
+  --color-surface-2: #f7f1e8;
+  --color-ink: #1f2a2e;
+  --color-muted: #5c6568;
+  --color-subtle: #8a908c;
+  --color-line: #ddd4c6;
+  --color-line-strong: #c9bfb0;
+
+  --color-primary: #2f6a78;
+  --color-primary-fg: #f7fbfb;
+  --color-primary-soft: #dce9ec;
+
+  --color-heal: #4d7d70;
+  --color-heal-soft: #dceae4;
+
+  --color-accent: #c4654a;
+  --color-accent-fg: #fff8f5;
+  --color-accent-soft: #f6e4dd;
+
+  --color-ok: #3d7a52;
+  --color-ok-soft: #dceadf;
+  --color-warn: #9a6b2a;
+  --color-warn-soft: #f4e7cf;
+  --color-danger: #b05454;
+  --color-danger-soft: #f3dddd;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+
+  --shadow-card: 0 1px 0 rgba(31, 42, 46, 0.04), 0 10px 28px -18px rgba(31, 42, 46, 0.28);
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    min-height: 100%;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  #app {
+    min-height: 100dvh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e8e0d4 0%, #f4efe6 45%, #e8e0d4 90%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
