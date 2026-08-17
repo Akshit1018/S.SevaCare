@@ -1,37 +1,44 @@
-# S.SevaCare
+# SevaCare — Open Source Home Care Marketplace for Families
 
-**Simple name:** SevaCare
+**SevaCare** is an open-source **home care shop** for families who live away from their parents. Book a nurse, companion, diagnostic, physio, or hospital day. Credits, quotes, and a Care Manager on every order.
 
-Home care shop for families and seniors.
+[![License: MIT](https://img.shields.io/badge/License-MIT-rose.svg)](LICENSE)
 
-This is a Grok App Builder project. The sandbox npm name was `app-builder-workspace`. On GitHub it is **S.SevaCare** (private).
+## Features
 
-## Run on this Mac
+- Service catalog + neighbourhood shops
+- Bookings, tracking, and memberships
+- Senior-friendly path and custom quotes
+- Cart, account, and provider admin
+- India-first pricing (starts around ₹499 in the demo)
 
-Need **Node.js 22** and **npm**. Postgres is not required (uses PGLite in the browser/process).
+## Who it is for
+
+- Eldercare / home healthcare startups
+- Families prototyping a **parent care app**
+- Developers building **care marketplace** UX
+
+## Quick start
 
 ```bash
-cd "/Users/akshitpareta/Documents/S-projects/S.SevaCare"
+git clone https://github.com/Akshit1018/S.SevaCare.git
+cd S.SevaCare
 npm install
-npm run dev
-```
-
-Open http://127.0.0.1:8080
-
-To skip Grok login in local preview:
-
-```bash
 VITE_AUTH_ENABLED=false npm run dev
 ```
 
-Optional AI (only if this app calls Grok): set `XAI_API_KEY`.
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
-## Scripts
+Demo catalog only — not a licensed care provider.
 
-- `npm run dev` — Vite on port 8080
-- `npm run build` — production build + DB migrate (skipped without DATABASE_URL)
-- `npm run typecheck`
+## Tech stack
 
-## Notes
+React 19 · TanStack Start · Vite · Tailwind · PGLite
 
-Do not commit `.env`, `node_modules`, or `.grok/`.
+## License
+
+[MIT](LICENSE)
+
+## Keywords
+
+home care app India, elder care marketplace, book a nurse online, parent care from abroad, senior companion booking, open source healthcare marketplace
